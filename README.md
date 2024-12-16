@@ -19,7 +19,7 @@ You can copy-paste these files in the 'User rules' of AdGuard too, then you can 
 
 ## Importing my personal config file
 
-My personal config file allows me to avoid ads and social media tweaks.
+My personal config file 'Personal AdGuard configuration.json' allows me to avoid ads and social media tweaks.
 
 Right now in December 2024, I've been using it for over 4 years without a problem.
 
