@@ -1,0 +1,7 @@
+! Some websites than do not support AdGuard, meaning that the user experience is bad when AdGuard is activated.
+@@||gouv.fr*^$document
+@@||tvtime.com*^$document
+@@||pathe.fr*^$document
+
+! "LaPoste" french post office's parcel tracker is unusable if this website is blocked :
+@@||cdn.tagcommander.com*^$document
