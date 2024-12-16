@@ -1,0 +1,5 @@
+! This filter excludes local websites with private IP addresses :
+@@||192.168.*^$document
+@@||10.*^$document
+@@||172.16.*^$document
+@@||127.0.0.1*^$document
