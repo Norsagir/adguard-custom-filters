@@ -28,3 +28,7 @@ You can still edit the config : once you imported it, nothing will prevent you f
 ## Custom filters by others
 
 A nice filter in order to hide YouTube Shorts : https://github.com/gijsdev/ublock-hide-yt-shorts
+
+## License
+
+See [LICENSE.md](https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md)
