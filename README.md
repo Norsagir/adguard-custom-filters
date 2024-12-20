@@ -24,3 +24,7 @@ My personal config file 'Personal AdGuard configuration.json' allows me to avoid
 Right now in December 2024, I've been using it for over 4 years without a problem.
 
 You can still edit the config : once you imported it, nothing will prevent you from modifying the imported configuration via the admin page of Adguard.
+
+## Custom filters by others
+
+A nice filter in order to hide YouTube Shorts : https://github.com/gijsdev/ublock-hide-yt-shorts
