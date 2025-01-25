@@ -8,3 +8,6 @@
 
 ! Annoying notification about login changes on Outlook Live webpage
 outlook.live.com###mainApp > div.gU1Tf.SFQkX:last-child > div.fui-MessageBar.r2oyxsj.___1kzpezm.fokr779.f13ftzij.frd1ypx.fqyqtrt.f16urcmr.flw47aw:nth-child(2)
+
+! Ad on yggtorrent
+ygg.re##div.text-center.text-white.promo-container
