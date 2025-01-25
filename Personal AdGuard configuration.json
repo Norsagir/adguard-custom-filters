@@ -68,6 +68,12 @@
             "title":"Hide YT watched videos",
             "trusted":true,
             "enabled":true
+         },
+         {
+            "customUrl":"https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/annoying-html-blocks.txt",
+            "title":"Annoying HTML Blocks",
+            "trusted":true,
+            "enabled":true
          }
       ],
       "user-filter":{
