@@ -1,7 +1,7 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 1.0.4
-! Last modified: 2025-01-29 15:08
+! Version: 1.0.5
+! Last modified: 2025-01-29 18:41
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -14,5 +14,5 @@ outlook.live.com###MainModule > div.SW7A6 > div.LBktY > div.Yd48r.css-274:first-
 
 ! Ads on yggtorrent
 ygg.re##div.text-center.text-white.promo-container
-ygg.re###cat > ul:last-child > li.misc:nth-child(2)
-ygg.re##header:nth-child(7) > div.ct > a.donate.pulse:last-child
+ygg.re##li.misc
+ygg.re##.donate.pulse
