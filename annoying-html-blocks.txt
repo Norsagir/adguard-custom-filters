@@ -1,13 +1,16 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 1.0.3
-! Last modified: 2025-01-26 15:35
+! Version: 1.0.4
+! Last modified: 2025-01-29 15:08
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
 
 ! Annoying notification about login changes on Outlook Live webpage
 outlook.live.com###mainApp > div.gU1Tf.SFQkX:last-child > div.fui-MessageBar.r2oyxsj.___1kzpezm.fokr779.f13ftzij.frd1ypx.fqyqtrt.f16urcmr.flw47aw:nth-child(2)
+
+! Microsoft ads on Outlook Live webpage
+outlook.live.com###MainModule > div.SW7A6 > div.LBktY > div.Yd48r.css-274:first-child > div.kTUsm.a7Ps_ > div.YYA9V.GciPK > div.syTot:last-child
 
 ! Ads on yggtorrent
 ygg.re##div.text-center.text-white.promo-container
