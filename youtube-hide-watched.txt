@@ -1,7 +1,7 @@
 ! Title: Hide YT watched videos
 ! Description: Hide watched videos (90% and up) from Home, Subscriptions Channels and Watch
-! Version: 1.1.0
-! Last modified: 2025-01-29 12:06
+! Version: 1.1.1
+! Last modified: 2025-01-29 18:00
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -15,33 +15,56 @@
 ! If you want to hide 80% watched videos, add the part below on each line :
 ! ,[style^="width: 8"]:not([style^="width: 8%"])
 
-! Lines beginning with "m." are for mobile extension
-! Since no watched videos is displayed on home page, no rule has been created
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! PC WEB BROWSER EXTENSION !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! Home
 youtube.com##[page-subtype="home"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-! m.youtube.com##:matches-path(/^/$/) XXXXXXXXXXXXXXXX
 
 ! Subscriptions
-youtube.com##:matches-attr(page-subtype="subscriptions") ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-m.youtube.com##:matches-path(/feed/subscriptions) ytm-item-section-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+youtube.com##[page-subtype="subscriptions"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Channels - Videos tab
-youtube.com##:matches-attr(page-subtype="channels") ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-m.youtube.com##:matches-path(/videos) ytm-rich-item-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Channels - Home of a channel
-youtube.com##:matches-attr(page-subtype="channels") ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-grid-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-m.youtube.com##:matches-path(/featured) ytm-compact-video-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-grid-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Watch
-youtube.com##:matches-path(/watch) ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-compact-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-m.youtube.com##:matches-path(/watch) ytm-video-with-context-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+[$path=/watch]youtube.com## ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-compact-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Search
-!youtube.com##:matches-path(/results) ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-!m.youtube.com##:matches-path(/results) ytm-item-section-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+![$path=/results]youtube.com## ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Playlists but not 'Watch Later'
-!youtube.com##:not(:matches-path(WL)):matches-attr(page-subtype="playlist") ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-playlist-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
+!youtube.com##[page-subtype="playlist"]:not(:matches-path(WL)) ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-playlist-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
+
+
+!!!!!!!!!!!!!!!!!!!!!!
+!!! IOS MOBILE APP !!!
+!!!!!!!!!!!!!!!!!!!!!!
+
+!!! Since no watched videos is displayed on home page, no rule has been created
+
+! Home
+![$path]m.youtube.com## XXXXXXXXXXXXXXXX
+
+! Subscriptions
+[$path=/feed/subscriptions]m.youtube.com## ytm-item-section-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+
+! Channels - Videos tab
+[$path=/videos]m.youtube.com## ytm-rich-item-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+
+! Channels - Home of a channel
+[$path=/featured]m.youtube.com## ytm-compact-video-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+
+! Watch
+[$path=/watch]m.youtube.com## ytm-video-with-context-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+
+! Search
+![$path=/results]m.youtube.com## ytm-item-section-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+
+! Playlists but not 'Watch Later'
 !m.youtube.com##:not(:matches-path(WL)) ytm-playlist-video-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
