@@ -1,7 +1,7 @@
 ! Title: Not supported websites
 ! Description: Some websites than do not support AdGuard, meaning that the user experience is bad when AdGuard is activated.
-! Version: 1.0.0
-! Last modified: 2024-12-20 10:39
+! Version: 1.0.1
+! Last modified: 2024-03-12 11:50
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -9,6 +9,7 @@
 @@||gouv.fr*^$document
 @@||tvtime.com*^$document
 @@||pathe.fr*^$document
+@@||www.photoweb.fr*^$document
 
 ! "LaPoste" french post office's parcel tracker is unusable if this website is blocked :
 @@||cdn.tagcommander.com*^$document
