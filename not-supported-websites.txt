@@ -13,5 +13,8 @@
 @@||synology.me*^$document
 @@||ups.com*^$document
 
+! Deezer login page only
+@@||account.deezer.com*^$document
+
 ! "LaPoste" french post office's parcel tracker is unusable if this website is blocked :
 @@||cdn.tagcommander.com*^$document
