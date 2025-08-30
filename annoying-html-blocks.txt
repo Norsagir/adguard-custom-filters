@@ -1,7 +1,7 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 1.0.10
-! Last modified: 2025-04-13 11:01
+! Version: 1.0.11
+! Last modified: 2025-08-30 23:13
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -23,3 +23,6 @@ gls.proxipick.com###engage-content > div.banner_view.banner_drawer_right > div.b
 ! 4chan ads
 4chan.org###bannerCnt
 4chan.org##div.middlead.center
+
+! Google Popup on mobile asking for the app (testing, maybe not working every time...)
+google.com###stUuGf > div > div.vSyRff.VDgVie.kqLqDd.GJyMZe.SNco2.vKW4md:last-child > div.jnyxRd.TpRPV > div.TvJSPe
