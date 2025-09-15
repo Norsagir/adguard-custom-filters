@@ -1,6 +1,6 @@
 ! Title: Not supported websites
 ! Description: Some websites than do not support AdGuard, meaning that the user experience is bad when AdGuard is activated.
-! Version: 1.0.4
+! Version: 2025.04.01
 ! Last modified: 2025-04-01 12:21
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters

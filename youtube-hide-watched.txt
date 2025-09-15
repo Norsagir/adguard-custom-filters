@@ -1,7 +1,7 @@
 ! Title: Hide YT watched videos
 ! Description: Hide watched videos (90% and up) from Home, Subscriptions Channels and Watch
-! Version: 1.2
-! Last modified: 2025-09-15 12:07
+! Version: 2025.09.15
+! Last modified: 2025-09-15 17:24
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md

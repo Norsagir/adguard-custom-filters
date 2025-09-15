@@ -1,6 +1,6 @@
 ! Title: Local IPs
 ! Description: This filter excludes local websites with private IP addresses
-! Version: 1.0.0
+! Version: 2024.12.20
 ! Last modified: 2024-12-20 10:37
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
