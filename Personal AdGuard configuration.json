@@ -31,11 +31,11 @@
          204,
          207,
          251,
-         1000,
          1001,
          1002,
          1003,
-         1004
+         1004,
+         1005
       ],
       "enabled-groups":[
          0,
@@ -46,12 +46,6 @@
          7
       ],
       "custom-filters":[
-         {
-            "customUrl":"https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/youtube-hide-watched.txt",
-            "title":"Hide YT watched videos",
-            "trusted":true,
-            "enabled":true
-         },
          {
             "customUrl":"https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/not-supported-websites.txt",
             "title":"Not supported websites",
@@ -71,14 +65,20 @@
             "enabled":true
          },
          {
+            "customUrl":"https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/youtube-hide-watched.txt",
+            "title":"Hide YT watched videos",
+            "trusted":true,
+            "enabled":true
+         },
+         {
             "customUrl":"https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/refs/heads/master/list.txt",
             "title":"Hide YouTube Shorts",
-            "trusted":false,
+            "trusted":true,
             "enabled":true
          }
       ],
       "user-filter":{
-         "enabled":true,
+         "enabled":false,
          "rules":"",
          "disabled-rules":""
       },
