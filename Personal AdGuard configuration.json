@@ -35,8 +35,7 @@
       1002,
       1003,
       1004,
-      1005,
-      1006
+      1005
     ],
     "enabled-groups": [
       0,
@@ -74,12 +73,6 @@
       {
         "customUrl": "https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/annoying-html-blocks.txt",
         "title": "Annoying HTML Blocks",
-        "trusted": true,
-        "enabled": true
-      },
-      {
-        "customUrl": "https://raw.githubusercontent.com/Norsagir/adguard-custom-filters/refs/heads/main/feature-changing.txt",
-        "title": "Feature Changing",
         "trusted": true,
         "enabled": true
       }
