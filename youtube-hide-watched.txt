@@ -1,7 +1,7 @@
 ! Title: Hide YT watched videos
 ! Description: Hide watched videos (90% and up) from Home, Subscriptions Channels and Watch
-! Version: 2025.09.15
-! Last modified: 2025-09-15 17:24
+! Version: 2026.02.28
+! Last modified: 2026-02-28 11:16
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -21,30 +21,30 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! Home
-! 2025-09 GUI
+! ACTUAL GUI
 youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(yt-lockup-view-model:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-! OLD GUI
+! OLD GUI until 2025-09
 youtube.com##[page-subtype="home"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Subscriptions
-! 2025-09 GUI
+! ACTUAL GUI
 youtube.com##[page-subtype="subscriptions"] ytd-rich-item-renderer:has(yt-lockup-view-model:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-! OLD GUI
+! OLD GUI until 2025-09
 youtube.com##[page-subtype="subscriptions"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Channels - Videos tab
 youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-rich-item-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Channels - Home of a channel
-! 2025-09 GUI
+! ACTUAL GUI
 youtube.com##[page-subtype="channels"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
-! OLD GUI
+! OLD GUI until 2025-09
 youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-grid-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Watch
-! 2025-09 GUI
+! ACTUAL GUI
 [$path=/watch]youtube.com## yt-lockup-view-model:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
-! OLD GUI
+! OLD GUI until 2025-09
 [$path=/watch]youtube.com## ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-compact-video-renderer:has(#progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"]))))
 
 ! Search
@@ -64,6 +64,9 @@ youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-ren
 ![$path]m.youtube.com## XXXXXXXXXXXXXXXX
 
 ! Subscriptions
+! ACTUAL GUI
+[$path=/feed/subscriptions]m.youtube.com## ytm-rich-item-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+! OLD GUI until 2026-02
 [$path=/feed/subscriptions]m.youtube.com## ytm-item-section-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
 
 ! Channels - Videos tab
