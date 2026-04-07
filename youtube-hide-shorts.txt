@@ -1,6 +1,6 @@
 ! Title: Hide YouTube Shorts
 ! Description: Hide traces of Shorts videos on Youtube
-! Version: 2026-04-07
+! Version: 2026.04.07
 ! Last modified: 2026-04-07 11:58
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
