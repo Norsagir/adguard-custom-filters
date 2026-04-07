@@ -1,20 +1,37 @@
 ! Title: Not supported websites
 ! Description: Some websites than do not support AdGuard, meaning that the user experience is bad when AdGuard is activated.
-! Version: 2025.04.01
-! Last modified: 2025-04-01 12:21
+! Version: 2026.04.07
+! Last modified: 2026-04-07 17:15
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
 
+! Tracking
+@@||ups.com*^$document
+@@||cdn.tagcommander.com*^$document
+
+! Government
 @@||gouv.fr*^$document
+
+! Leisure
 @@||tvtime.com*^$document
 @@||pathe.fr*^$document
-@@||www.photoweb.fr*^$document
-@@||synology.me*^$document
-@@||ups.com*^$document
-
-! Deezer login page only
 @@||account.deezer.com*^$document
 
-! "LaPoste" french post office's parcel tracker is unusable if this website is blocked :
-@@||cdn.tagcommander.com*^$document
+! Shopping
+@@||www.photoweb.fr*^$document
+
+! Synology DDNS
+@@||synology.me*^$document
+@@||DiskStation.me*^$document
+@@||i234.me*^$document
+@@||myDS.me*^$document
+@@||DSCloud.biz*^$document
+@@||DSCloud.me*^$document
+@@||DSCloud.mobi*^$document
+@@||DSmyNAS.com*^$document
+@@||DSmyNAS.net*^$document
+@@||DSmyNAS.org*^$document
+@@||FamilyDS.com*^$document
+@@||FamilyDS.net*^$document
+@@||FamilyDS.org*^$document
