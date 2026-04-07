@@ -1,0 +1,98 @@
+! Title: WIP - Hide YouTube Shorts
+! Description: WIP - Hide traces of Shorts videos on Youtube
+! Version: 2026-04-07
+! Last modified: 2026-04-07 11:56
+! Expires: 2 weeks (update frequency)
+! Homepage: https://github.com/Norsagir/adguard-custom-filters
+! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
+! Inspired by: https://github.com/gijsdev/ublock-hide-yt-shorts
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! PC WEB BROWSER EXTENSION !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!! Home
+! Shelf section
+youtube.com##[page-subtype="home"] ytd-rich-section-renderer:has([is-shorts])
+
+!! Channels
+! Shelf section
+youtube.com##[page-subtype="channels"] ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
+
+!! Subscriptions
+! Shelf section
+youtube.com##[page-subtype="subscriptions"] ytd-rich-section-renderer:has([is-shorts])
+
+!! Search
+! Shelf sections
+youtube.com##[page-subtype="search"] grid-shelf-view-model:has(yt-section-header-view-model:has(yt-shelf-header-layout:has-text(Shorts)))
+
+
+!!!!! DISABLED because no personal use, but can be reactivated !!!!!
+!! Global
+! Remove Shorts button in the sidebar menu
+!youtube.com##ytd-guide-entry-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
+! Remove Shorts button if the sidebar menu is mini
+!youtube.com##ytd-mini-guide-entry-renderer:has([title="Shorts"])
+
+!! Channels
+! Remove button
+!youtube.com##[page-subtype="channels"] yt-tab-shape:has-text(/^Shorts$/)
+
+!! Search
+! Remove button
+!youtube.com##[page-subtype="search"] yt-chip-cloud-chip-renderer:has-text(Shorts)
+
+!! History
+! Remove every video with the tag 'Shorts' in overlay
+!youtube.com##[page-subtype="history"] ytd-video-renderer:has([overlay-style="SHORTS"])
+! Remove button
+!youtube.com##[page-subtype="history"] chip-view-model:has-text(Shorts)
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!
+!!! IOS MOBILE APP !!!
+!!!!!!!!!!!!!!!!!!!!!!
+
+!! Home
+! Shelf section
+[$path=/]m.youtube.com## grid-shelf-view-model:has-text(Shorts)
+
+!! Channels
+! Shelf section
+[$path=/@]m.youtube.com## ytm-item-section-renderer:has-text(Shorts)
+
+!! Subscriptions
+! Shelf section
+[$path=/feed/subscriptions]m.youtube.com## ytm-rich-section-renderer:has-text(Shorts)
+
+!! Search
+! Shelf sections
+! Language dependency so no global filter available
+! FR:
+[$path=/results]m.youtube.com## grid-shelf-view-model:has-text(Nouveautés)
+! Hide shorts without shelf section
+[$path=/results]m.youtube.com## grid-shelf-view-model:has(ytm-shorts-lockup-view-model)
+! Remove every video with the tag 'Shorts' in overlay
+[$path=/results]m.youtube.com## ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer:has-text(SHORTS))
+
+
+!!!!! DISABLED because no personal use, but can be reactivated !!!!!
+!! Global
+! Remove Shorts button in the bottom menu
+!m.youtube.com## ytm-pivot-bar-item-renderer:has(.yt-core-attributed-string:has-text(Shorts))
+
+!! Channels
+! Remove button
+![$path=/@]m.youtube.com## yt-tab-shape:has-text(/^Shorts$/)
+
+!! History
+! Remove every video with the tag 'Shorts' in overlay
+![$path=/history]m.youtube.com## ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer:has-text(SHORTS))
+
+!! Profile
+! Remove every video with the tag 'Shorts' in overlay
+![$path=/library]m.youtube.com## ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer:has-text(SHORTS))
