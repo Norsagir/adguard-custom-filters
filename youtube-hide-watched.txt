@@ -1,7 +1,7 @@
 ! Title: Hide YT watched videos
 ! Description: Hide watched videos (90% and up) from Home, Subscriptions Channels and Watch
 ! Version: 2026.04.07
-! Last modified: 2026-04-07 10:53
+! Last modified: 2026-04-07 12:44
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -83,9 +83,12 @@ youtube.com##[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-ren
 [$path=/videos]m.youtube.com## ytm-rich-item-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
 
 ! Channels - Home of a channel
-! ACTUAL GUI
-[$path=/featured]m.youtube.com## ytm-compact-video-renderer:has(.YtmThumbnailOverlayResumePlaybackRendererThumbnailOverlayResumePlaybackProgress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
-! OLD GUI until 2026-04-03
+!! ACTUAL GUI
+! For you category
+[$path=/@]m.youtube.com## ytm-video-card-renderer:has(.YtmThumbnailOverlayResumePlaybackRendererThumbnailOverlayResumePlaybackProgress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+! Other categories
+[$path=/@]m.youtube.com## ytm-compact-video-renderer:has(.YtmThumbnailOverlayResumePlaybackRendererThumbnailOverlayResumePlaybackProgress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
+!! OLD GUI until 2026-04-03
 [$path=/featured]m.youtube.com## ytm-compact-video-renderer:has(.thumbnail-overlay-resume-playback-progress:is([style="width: 100%;"],[style^="width: 9"]:not([style^="width: 9%"])))
 
 ! Watch
