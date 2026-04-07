@@ -21,13 +21,26 @@ You can copy-paste these files in the 'User rules' of AdGuard too, then you can 
 
 My personal config file 'Personal AdGuard configuration.json' allows me to avoid ads and social media tweaks.
 
-Right now in December 2024, I've been using it for over 4 years without a problem.
+Right now in April 2026, I've been using it for over 6 years without a problem.
 
 You can still edit the config : once you imported it, nothing will prevent you from modifying the imported configuration via the admin page of Adguard.
 
-## Custom filters by others
+## List of filters
 
-A nice filter in order to hide YouTube Shorts : https://github.com/gijsdev/ublock-hide-yt-shorts
+- **annoying-html-blocks.txt**: My personal list for HTML blocks that annoys me while browsing some regular websites
+
+- **not-supported-websites.txt**: Avoid blocking anything on specific sites since AdGuard is breaking the service
+
+- **youtube-hide-shorts.txt**: Hide traces of Shorts on Youtube, configured just to hide the videos but can be uncommented to block any trace of Shorts ; works with PC web browser extension and iOS app
+
+- **youtube-hide-watched.txt**: Hide watched videos, configured to hide videos that are watched 90% of the lenght and up from Home, Subscriptions Channels and Watch ; can be modified to change % ; works with PC web browser extension and iOS app
+
+- Static files (no changes planned):
+   - **local-ips.txt**: Avoid blocking anything on LAN, useful if you are hosting some service
+
+## Special thanks
+
+- gijsdev for his work on Youtube Shorts for uBlock Origin, big inspiration for my AdGuard list (see his work [here](https://github.com/gijsdev/ublock-hide-yt-shorts))
 
 ## License
 
