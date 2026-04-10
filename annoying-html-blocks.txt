@@ -1,7 +1,7 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 2026.04.07
-! Last modified: 2026-04-07 17:02
+! Version: 2026.04.10
+! Last modified: 2026-04-10 10:17
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -9,3 +9,6 @@
 ! 4chan ads
 4chan.org## div.title.desktop
 4chan.org## div.middlead.center
+
+! Generic
+###over:has-text(AdBlock AD - Close)
