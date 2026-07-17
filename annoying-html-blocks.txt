@@ -1,7 +1,7 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 2026.05.24
-! Last modified: 2026-05-24 12:00
+! Version: 2026.07.17
+! Last modified: 2026-07-17 10:09
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -10,8 +10,9 @@
 4chan.org## div.title.desktop
 4chan.org## div.middlead.center
 
-! Google popup on Safari for iOS
+! Google popups on Safari for iOS
 ! May not be working everytime...
 google.com###fOVeHd > div > div.vSyRff.VDgVie.kqLqDd.GJyMZe.SNco2.vKW4md:last-child > div.jnyxRd.TpRPV > div.TvJSPe
+google.com###fOVeHd > div > div.vSyRff.VDgVie.kqLqDd.GJyMZe.SNco2.vKW4md:last-child > div.jnyxRd.TpRPV > div.vtgRe
 
 ! Generic
