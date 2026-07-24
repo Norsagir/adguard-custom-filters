@@ -1,7 +1,7 @@
 ! Title: Annoying HTML Blocks
 ! Description: Hide some annoying HTML blocks on the Internet
-! Version: 2026.07.17
-! Last modified: 2026-07-17 10:09
+! Version: 2026.07.24
+! Last modified: 2026-07-24 11:25
 ! Expires: 2 weeks (update frequency)
 ! Homepage: https://github.com/Norsagir/adguard-custom-filters
 ! License: https://github.com/Norsagir/adguard-custom-filters/blob/main/LICENSE.md
@@ -14,5 +14,16 @@
 ! May not be working everytime...
 google.com###fOVeHd > div > div.vSyRff.VDgVie.kqLqDd.GJyMZe.SNco2.vKW4md:last-child > div.jnyxRd.TpRPV > div.TvJSPe
 google.com###fOVeHd > div > div.vSyRff.VDgVie.kqLqDd.GJyMZe.SNco2.vKW4md:last-child > div.jnyxRd.TpRPV > div.vtgRe
+
+! Google Search - AI Overview
+! As configured in official "Other Annyonances" AdGuard filter
+! https://github.com/AdguardTeam/AdguardFilters/blob/master/AnnoyancesFilter/Other/sections/annoyances.txt
+! From line 260
+google.*##div:not([role]) > div[data-hveid] div[style^="margin-bottom:"][data-hveid]:has(div[id^="folsrch"])
+google.*##style + div[data-mcpr][style^="margin-bottom:"]:has(div[data-async-type="folsrch"])
+google.*##style + div[data-mcpr][style^="margin-bottom:"] div[data-async-type="folsrch"]
+google.*##div[data-lhcontainer="1"][eid][data-ved] > div > div > div[jsname] > div[style="display:contents"]
+://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
+google.*##div[data-q][data-al]
 
 ! Generic
